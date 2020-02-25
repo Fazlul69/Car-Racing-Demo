@@ -187,21 +187,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 43311672}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &43311675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43311674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72200beb025fe6449b243f8f3a471fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wc: {fileID: 0}
-  torque: 200
-  wheel: {fileID: 529786916}
 --- !u!146 &43311676
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -376,21 +361,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 300085064}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &300085067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300085066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72200beb025fe6449b243f8f3a471fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wc: {fileID: 0}
-  torque: 200
-  wheel: {fileID: 1090217451}
 --- !u!146 &300085068
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -906,21 +876,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 760641281}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &760641284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760641283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72200beb025fe6449b243f8f3a471fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wc: {fileID: 0}
-  torque: 200
-  wheel: {fileID: 446636339}
 --- !u!146 &760641285
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -1052,6 +1007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 944453638}
+  - component: {fileID: 944453639}
   m_Layer: 0
   m_Name: CarParent
   m_TagString: Untagged
@@ -1075,6 +1031,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944453639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944453637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72200beb025fe6449b243f8f3a471fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc:
+  - {fileID: 1659743163}
+  - {fileID: 43311676}
+  - {fileID: 300085068}
+  - {fileID: 760641285}
+  torque: 200
+  wheel:
+  - {fileID: 752576276}
+  - {fileID: 529786916}
+  - {fileID: 1090217451}
+  - {fileID: 446636339}
+  maxStreetAngle: 30
 --- !u!1001 &1090217450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1291,21 +1271,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1659743159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1659743162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659743161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72200beb025fe6449b243f8f3a471fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wc: {fileID: 0}
-  torque: 200
-  wheel: {fileID: 752576276}
 --- !u!146 &1659743163
 WheelCollider:
   m_ObjectHideFlags: 0
