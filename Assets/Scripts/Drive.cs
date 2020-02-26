@@ -8,21 +8,30 @@ public class Drive : MonoBehaviour
     public float torque = 200;
     public GameObject[] wheel;
     public float maxStreetAngle = 30;
+    public float maxBreakTorque = 500;
+    public AudioSource audioSkid;
     // Start is called before the first frame update
     void Start()
     {
        // wc = this.GetComponent<WheelCollider>();
     }
 
-    void Go(float accel, float steer)
+    void Go(float accel, float steer, float brake)
     {
         accel = Mathf.Clamp(accel, -1, 1);
         steer = Mathf.Clamp(steer, -1, 1) * maxStreetAngle;
+        brake = Mathf.Clamp(brake, 0, 1) * maxBreakTorque;
+
         float thrustTorque = accel * torque;
+
         for (int i = 0; i < wc.Length; i++) {
             wc[i].motorTorque = thrustTorque;
-            if (i < 2) {
+            if (i < 2)
+            {
                 wc[i].steerAngle = steer;
+            }
+            else {
+                wc[i].brakeTorque = brake;
             }
         
 
@@ -41,6 +50,32 @@ public class Drive : MonoBehaviour
     {
         float a = Input.GetAxis("Vertical");
         float s = Input.GetAxis("Horizontal");
-        Go(a,s);
+        float b = Input.GetAxis("Jump");
+        Go(a,s,b);
+        CheckForSKid();
     }
+
+    void CheckForSKid() {
+        int numSkiddding = 0;
+        for (int i = 0; i < wc.Length; i++)
+        {
+            WheelHit wheelhit;
+            wc[i].GetGroundHit(out wheelhit);
+
+            if (Mathf.Abs(wheelhit.forwardSlip) >= .4f || Mathf.Abs(wheelhit.sidewaysSlip) >= .4f)
+            {
+                numSkiddding++;
+                if (!audioSkid.isPlaying)
+                {
+                    audioSkid.Play();
+                }
+            }
+        }
+        if (numSkiddding == 0 && audioSkid.isPlaying)
+        {
+            audioSkid.Stop();
+        }
+        
+    }
+    
 }

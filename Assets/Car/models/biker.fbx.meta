@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 474a73983359bfd43b76a7f702d41a6b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: B_bone
+    100002: //RootNode
+    100004: biker
+    100006: biker_Armature
+    100008: Body
+    100010: Body_2
+    100012: Bone.002
+    100014: fingers.L
+    100016: fingers.R
+    100018: fingers_2.L
+    100020: fingers_2.L_end
+    100022: fingers_2.R
+    100024: fingers_2.R_end
+    100026: fingers_B.L
+    100028: fingers_B.L_end
+    100030: fingers_B.R
+    100032: fingers_B.R_end
+    100034: foot.L
+    100036: foot.L.001
+    100038: foot.L.001_end
+    100040: foot.L_end
+    100042: foot.R
+    100044: foot.R.001
+    100046: foot.R.001_end
+    100048: foot.R_end
+    100050: General
+    100052: H.L
+    100054: H.R
+    100056: hand.L
+    100058: hand.R
+    100060: hand_2.L
+    100062: hand_2.R
+    100064: head
+    100066: IK.L
+    100068: ik.L
+    100070: IK.L_end
+    100072: IK.R
+    100074: ik.R
+    100076: IK.R_end
+    100078: leg.L
+    100080: leg.R
+    100082: mouth
+    100084: mouth_end
+    100086: ring
+    100088: ring_end
+    100090: shin.L
+    100092: shin.R
+    400000: B_bone
+    400002: //RootNode
+    400004: biker
+    400006: biker_Armature
+    400008: Body
+    400010: Body_2
+    400012: Bone.002
+    400014: fingers.L
+    400016: fingers.R
+    400018: fingers_2.L
+    400020: fingers_2.L_end
+    400022: fingers_2.R
+    400024: fingers_2.R_end
+    400026: fingers_B.L
+    400028: fingers_B.L_end
+    400030: fingers_B.R
+    400032: fingers_B.R_end
+    400034: foot.L
+    400036: foot.L.001
+    400038: foot.L.001_end
+    400040: foot.L_end
+    400042: foot.R
+    400044: foot.R.001
+    400046: foot.R.001_end
+    400048: foot.R_end
+    400050: General
+    400052: H.L
+    400054: H.R
+    400056: hand.L
+    400058: hand.R
+    400060: hand_2.L
+    400062: hand_2.R
+    400064: head
+    400066: IK.L
+    400068: ik.L
+    400070: IK.L_end
+    400072: IK.R
+    400074: ik.R
+    400076: IK.R_end
+    400078: leg.L
+    400080: leg.R
+    400082: mouth
+    400084: mouth_end
+    400086: ring
+    400088: ring_end
+    400090: shin.L
+    400092: shin.R
+    4300000: biker
+    7400000: biker_Armature|rotate
+    9500000: //RootNode
+    13700000: biker
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: biker_1
+    second: {fileID: 2100000, guid: c3e87c198f0be334b89f419e18f1b832, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 1.7
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: biker_Armature|rotate
+      takeName: biker_Armature|rotate
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
