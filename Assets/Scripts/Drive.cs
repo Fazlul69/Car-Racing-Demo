@@ -16,6 +16,8 @@ public class Drive : MonoBehaviour
 
     public ParticleSystem smokePrefab;
     ParticleSystem[] skidSmoke = new ParticleSystem[4];
+
+    public GameObject brakeLight;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Drive : MonoBehaviour
             skidSmoke[i] = Instantiate(smokePrefab);
             skidSmoke[i].Stop();
         }
+        brakeLight.SetActive(false);
     }
 
     void Go(float accel, float steer, float brake)
@@ -32,6 +35,12 @@ public class Drive : MonoBehaviour
         accel = Mathf.Clamp(accel, -1, 1);
         steer = Mathf.Clamp(steer, -1, 1) * maxStreetAngle;
         brake = Mathf.Clamp(brake, 0, 1) * maxBreakTorque;
+
+        if (brake != 0)
+        {
+            brakeLight.SetActive(true);
+        }
+        else { brakeLight.SetActive(false); }
 
         float thrustTorque = accel * torque;
 
