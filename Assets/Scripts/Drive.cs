@@ -10,10 +10,21 @@ public class Drive : MonoBehaviour
     public float maxStreetAngle = 30;
     public float maxBreakTorque = 500;
     public AudioSource audioSkid;
+
+    public Transform SkidTrailPrefab;
+    Transform[] skidTrails = new Transform[4];
+
+    public ParticleSystem smokePrefab;
+    ParticleSystem[] skidSmoke = new ParticleSystem[4];
     // Start is called before the first frame update
     void Start()
     {
-       // wc = this.GetComponent<WheelCollider>();
+        // wc = this.GetComponent<WheelCollider>();
+        for (int i = 0; i < 4; i++)
+        {
+            skidSmoke[i] = Instantiate(smokePrefab);
+            skidSmoke[i].Stop();
+        }
     }
 
     void Go(float accel, float steer, float brake)
@@ -51,7 +62,7 @@ public class Drive : MonoBehaviour
         float a = Input.GetAxis("Vertical");
         float s = Input.GetAxis("Horizontal");
         float b = Input.GetAxis("Jump");
-        Go(a,s,b);
+        Go(a,s,b); 
         CheckForSKid();
     }
 
@@ -69,6 +80,12 @@ public class Drive : MonoBehaviour
                 {
                     audioSkid.Play();
                 }
+                StartSkidTrail(i);
+                skidSmoke[i].transform.position = wc[i].transform.position - wc[i].transform.up * wc[i].radius;
+                skidSmoke[i].Emit(1);
+            }
+            else {
+                EndSkidTrail(i);
             }
         }
         if (numSkiddding == 0 && audioSkid.isPlaying)
@@ -77,5 +94,26 @@ public class Drive : MonoBehaviour
         }
         
     }
-    
+
+    public void StartSkidTrail(int i)
+    {
+        if (skidTrails[i] == null)
+        {
+            skidTrails[i] = Instantiate(SkidTrailPrefab);
+        }
+        skidTrails[i].parent = wc[i].transform;
+        skidTrails[i].localRotation = Quaternion.Euler(90, 0, 0);
+        skidTrails[i].localPosition = -Vector3.up * wc[i].radius;
+    }
+
+    public void EndSkidTrail(int i)
+    {
+        if (skidTrails[i] == null)
+            return;
+        Transform holder = skidTrails[i];
+        skidTrails[i] = null;
+        holder.parent = null;
+        holder.rotation = Quaternion.Euler(90, 0, 0);
+        Destroy(holder.gameObject, 15);
+    }
 }
